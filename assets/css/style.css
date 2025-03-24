@@ -1,0 +1,93 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+/* Estilos para cuando la barra lateral está contraída */
+.sidebar.collapsed {
+    width: 60px; /* Ancho cuando está contraída */
+}
+
+/* El logo y los enlaces dentro de la barra lateral */
+.sidebar .logo img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Botón de hamburguesa (tres barras) */
+.sidebar-toggle {
+    display: none; /* Ocultamos el botón por defecto en pantallas grandes */
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+    display: block; /* Mostrar el botón cuando la barra está contraída */
+}
+
+/* Estilos para los enlaces de navegación */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar nav ul li .icon {
+    font-size: 24px;
+}
+
+.sidebar nav ul li .label {
+    display: inline-block;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed nav ul li .label {
+    opacity: 0; /* Ocultar las etiquetas cuando la barra está contraída */
+}
+
+.sidebar nav ul li:hover {
+    background-color: #34495e;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: calc(100% - 260px);
+}
+
+/* Estilo para cuando la barra está contraída */
+.sidebar.collapsed + .main-content {
+    margin-left: 60px;
+}
