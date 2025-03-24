@@ -1,0 +1,56 @@
+<!-- stock-management.html -->
+<section id="gestion-stock">
+    <h1>Gestión de Stock</h1>
+    
+    <!-- Filtros de Búsqueda -->
+    <div class="filters">
+        <label for="category-filter">Categoría:</label>
+        <select id="category-filter">
+            <option value="all">Todas</option>
+            <option value="category1">Categoría 1</option>
+            <option value="category2">Categoría 2</option>
+        </select>
+
+        <label for="date-filter">Fecha:</label>
+        <input type="date" id="date-filter">
+        
+        <button id="search-button">Buscar</button>
+    </div>
+
+    <!-- Tabla de Repuestos -->
+    <table>
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Stock Inicial</th>
+                <th>Ingresos Totales</th>
+                <th>Salidas Totales</th>
+                <th>Stock Final</th>
+                <th>Precio</th>
+                <th>Valor Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="stock-table-body">
+            <tr>
+                <td>1</td>
+                <td>ABC123</td>
+                <td>Repuesto A</td>
+                <td>Categoria 1</td>
+                <td>100</td>
+                <td>50</td>
+                <td>30</td>
+                <td>120</td>
+                <td>$10</td>
+                <td>$1200</td>
+                <td><button class="edit-button">Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Botón para agregar repuesto -->
+    <button id="add-stock-button">Agregar Repuesto</button>
+</section>
